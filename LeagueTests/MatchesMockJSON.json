@@ -1,0 +1,40 @@
+{
+    "matches": [
+        {
+            "id": 1,
+            "utcDate": "2023-04-01T10:00:00Z",
+            "homeTeam": {
+                "name": "Team A",
+                "crest": "https://example.com/team-a-crest.png"
+            },
+            "awayTeam": {
+                "name": "Team B",
+                "crest": "https://example.com/team-b-crest.png"
+            },
+            "score": {
+                "fullTime": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "id": 2,
+            "utcDate": "2023-04-02T13:30:00Z",
+            "homeTeam": {
+                "name": "Team C",
+                "crest": "https://example.com/team-c-crest.png"
+            },
+            "awayTeam": {
+                "name": "Team D",
+                "crest": "https://example.com/team-d-crest.png"
+            },
+            "score": {
+                "fullTime": {
+                    "home": 2,
+                    "away": 2
+                }
+            }
+        }
+    ]
+}

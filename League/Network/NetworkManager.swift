@@ -43,7 +43,11 @@ extension MyAPI: TargetType {
     }
 }
 
-class NetworkManager {
+protocol NetworkProtocol {
+    func getMatches(completion: @escaping (Result<[Match], APIError>) -> Void)
+}
+
+final class NetworkManager: NetworkProtocol {
     private let provider = MoyaProvider<MyAPI>()
     
     func getMatches(completion: @escaping (Result<[Match], APIError>) -> Void) {

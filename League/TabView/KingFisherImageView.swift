@@ -21,6 +21,7 @@ struct KingFisherImageView: View {
 
 struct KingFisherImageView_Previews: PreviewProvider {
     static var previews: some View {
-        KingFisherImageView(imageStrURL: "https://crests.football-data.org/PL.png")
+//        KingFisherImageView(imageStrURL: "https://crests.football-data.org/PL.png")
+        KingFisherImageView(imageStrURL: "https://crests.football-data.org/63.svg")
     }
 }

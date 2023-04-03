@@ -8,11 +8,14 @@
 import SwiftUI
 
 class MatchesViewModel: ObservableObject {
-    @Published var matches = [Match]()
-    var networkManager: NetworkManager
     
-    init(networkManager: NetworkManager) {
+    @Published var matches = [Match]()
+    var networkManager: NetworkProtocol
+    @AppStorage("favoriteMatches") var favoriteMatchesData: Data = Data()
+    
+    init(networkManager: NetworkProtocol) {
         self.networkManager = networkManager
+        favoriteMatches.removeAll(where: {$0.utcDate == "0909"})
     }
     
     func getPLMatches() {
@@ -26,5 +29,26 @@ class MatchesViewModel: ObservableObject {
         }
     }
     
+    var favoriteMatches: [Match] {
+            get {
+                if let decoded = try? JSONDecoder().decode([Match].self, from: favoriteMatchesData) {
+                    return decoded
+                }
+                return []
+            }
+            set {
+                if let encoded = try? JSONEncoder().encode(newValue) {
+                    favoriteMatchesData = encoded
+                }
+            }
+        }
+    
+    func toggleFavorite(match: Match) {
+        if favoriteMatches.contains(match) {
+                favoriteMatches.removeAll(where: { $0 == match })
+            } else {
+                favoriteMatches.append(match)
+            }
+        }
     
 }

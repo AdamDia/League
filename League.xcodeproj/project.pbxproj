@@ -21,7 +21,24 @@
 		8AA3697129D8E57A00B7A7B7 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3696A29D8E4C400B7A7B7 /* FavoritesView.swift */; };
 		8AA3697429D924CD00B7A7B7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA3697329D924CD00B7A7B7 /* Kingfisher */; };
 		8AA3697629D9266700B7A7B7 /* KingFisherImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3697529D9266700B7A7B7 /* KingFisherImageView.swift */; };
+		8AA3698529DA3E1C00B7A7B7 /* MatchesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3698429DA3E1C00B7A7B7 /* MatchesViewModelTests.swift */; };
+		8AA3698C29DA457600B7A7B7 /* MatchesMockJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3698B29DA457600B7A7B7 /* MatchesMockJSON.json */; };
+		8AA3698E29DA45F000B7A7B7 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3698D29DA45F000B7A7B7 /* JSONLoader.swift */; };
+		8AA3699029DA463C00B7A7B7 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3698F29DA463C00B7A7B7 /* MockNetworkManager.swift */; };
+		8AA3699229DA46E500B7A7B7 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3699129DA46E500B7A7B7 /* NetworkManagerTests.swift */; };
+		8AA3699529DA752900B7A7B7 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA3699429DA752900B7A7B7 /* SVGKit */; };
+		8AA3699729DA752900B7A7B7 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA3699629DA752900B7A7B7 /* SVGKitSwift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AA3698629DA3E1C00B7A7B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AA3690C29D54A9C00B7A7B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AA3691329D54A9C00B7A7B7;
+			remoteInfo = League;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8AA3691429D54A9C00B7A7B7 /* League.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = League.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +55,12 @@
 		8AA3696829D8E45300B7A7B7 /* HomeMatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMatchesView.swift; sourceTree = "<group>"; };
 		8AA3696A29D8E4C400B7A7B7 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		8AA3697529D9266700B7A7B7 /* KingFisherImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherImageView.swift; sourceTree = "<group>"; };
+		8AA3698229DA3E1C00B7A7B7 /* LeagueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeagueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA3698429DA3E1C00B7A7B7 /* MatchesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModelTests.swift; sourceTree = "<group>"; };
+		8AA3698B29DA457600B7A7B7 /* MatchesMockJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MatchesMockJSON.json; sourceTree = "<group>"; };
+		8AA3698D29DA45F000B7A7B7 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		8AA3698F29DA463C00B7A7B7 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		8AA3699129DA46E500B7A7B7 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,8 +68,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA3699729DA752900B7A7B7 /* SVGKitSwift in Frameworks */,
+				8AA3699529DA752900B7A7B7 /* SVGKit in Frameworks */,
 				8AA3697429D924CD00B7A7B7 /* Kingfisher in Frameworks */,
 				8AA3696429D8CC2600B7A7B7 /* Moya in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AA3697F29DA3E1C00B7A7B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8AA3691629D54A9C00B7A7B7 /* League */,
+				8AA3698329DA3E1C00B7A7B7 /* LeagueTests */,
 				8AA3691529D54A9C00B7A7B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8AA3691429D54A9C00B7A7B7 /* League.app */,
+				8AA3698229DA3E1C00B7A7B7 /* LeagueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +130,7 @@
 				8AA3695C29D8894A00B7A7B7 /* NetworkManager.swift */,
 				8AA3696029D88C4800B7A7B7 /* MatchesDataModel.swift */,
 				8AA3695E29D88A8D00B7A7B7 /* APIError.swift */,
+				8AA3698D29DA45F000B7A7B7 /* JSONLoader.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -129,6 +164,17 @@
 			path = "Favorites Second Tab";
 			sourceTree = "<group>";
 		};
+		8AA3698329DA3E1C00B7A7B7 /* LeagueTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3698B29DA457600B7A7B7 /* MatchesMockJSON.json */,
+				8AA3698F29DA463C00B7A7B7 /* MockNetworkManager.swift */,
+				8AA3698429DA3E1C00B7A7B7 /* MatchesViewModelTests.swift */,
+				8AA3699129DA46E500B7A7B7 /* NetworkManagerTests.swift */,
+			);
+			path = LeagueTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,10 +194,30 @@
 			packageProductDependencies = (
 				8AA3696329D8CC2600B7A7B7 /* Moya */,
 				8AA3697329D924CD00B7A7B7 /* Kingfisher */,
+				8AA3699429DA752900B7A7B7 /* SVGKit */,
+				8AA3699629DA752900B7A7B7 /* SVGKitSwift */,
 			);
 			productName = League;
 			productReference = 8AA3691429D54A9C00B7A7B7 /* League.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8AA3698129DA3E1C00B7A7B7 /* LeagueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AA3698829DA3E1C00B7A7B7 /* Build configuration list for PBXNativeTarget "LeagueTests" */;
+			buildPhases = (
+				8AA3697E29DA3E1C00B7A7B7 /* Sources */,
+				8AA3697F29DA3E1C00B7A7B7 /* Frameworks */,
+				8AA3698029DA3E1C00B7A7B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AA3698729DA3E1C00B7A7B7 /* PBXTargetDependency */,
+			);
+			name = LeagueTests;
+			productName = LeagueTests;
+			productReference = 8AA3698229DA3E1C00B7A7B7 /* LeagueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -165,6 +231,10 @@
 				TargetAttributes = {
 					8AA3691329D54A9C00B7A7B7 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					8AA3698129DA3E1C00B7A7B7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8AA3691329D54A9C00B7A7B7;
 					};
 				};
 			};
@@ -180,12 +250,14 @@
 			packageReferences = (
 				8AA3696229D8CC2600B7A7B7 /* XCRemoteSwiftPackageReference "Moya" */,
 				8AA3697229D924CD00B7A7B7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8AA3699329DA752900B7A7B7 /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			productRefGroup = 8AA3691529D54A9C00B7A7B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8AA3691329D54A9C00B7A7B7 /* League */,
+				8AA3698129DA3E1C00B7A7B7 /* LeagueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +272,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AA3698029DA3E1C00B7A7B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA3698C29DA457600B7A7B7 /* MatchesMockJSON.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA3697129D8E57A00B7A7B7 /* FavoritesView.swift in Sources */,
+				8AA3698E29DA45F000B7A7B7 /* JSONLoader.swift in Sources */,
 				8AA3695A29D8833D00B7A7B7 /* MatchCell.swift in Sources */,
 				8AA3696129D88C4800B7A7B7 /* MatchesDataModel.swift in Sources */,
 				8AA3696929D8E45300B7A7B7 /* HomeMatchesView.swift in Sources */,
@@ -220,7 +301,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AA3697E29DA3E1C00B7A7B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA3699229DA46E500B7A7B7 /* NetworkManagerTests.swift in Sources */,
+				8AA3699029DA463C00B7A7B7 /* MockNetworkManager.swift in Sources */,
+				8AA3698529DA3E1C00B7A7B7 /* MatchesViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AA3698729DA3E1C00B7A7B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AA3691329D54A9C00B7A7B7 /* League */;
+			targetProxy = 8AA3698629DA3E1C00B7A7B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8AA3692029D54A9D00B7A7B7 /* Debug */ = {
@@ -395,6 +494,42 @@
 			};
 			name = Release;
 		};
+		8AA3698929DA3E1C00B7A7B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHKRMS9TZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.adam.LeagueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/League.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/League";
+			};
+			name = Debug;
+		};
+		8AA3698A29DA3E1C00B7A7B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHKRMS9TZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.adam.LeagueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/League.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/League";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,6 +547,15 @@
 			buildConfigurations = (
 				8AA3692329D54A9D00B7A7B7 /* Debug */,
 				8AA3692429D54A9D00B7A7B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AA3698829DA3E1C00B7A7B7 /* Build configuration list for PBXNativeTarget "LeagueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA3698929DA3E1C00B7A7B7 /* Debug */,
+				8AA3698A29DA3E1C00B7A7B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -435,6 +579,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		8AA3699329DA752900B7A7B7 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -447,6 +599,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8AA3697229D924CD00B7A7B7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		8AA3699429DA752900B7A7B7 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AA3699329DA752900B7A7B7 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		8AA3699629DA752900B7A7B7 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AA3699329DA752900B7A7B7 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

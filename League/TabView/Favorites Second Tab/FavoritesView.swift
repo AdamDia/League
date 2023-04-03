@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    
+    @StateObject private var viewModel =  MatchesViewModel(networkManager: NetworkManager())
+    
     var body: some View {
-            List  {
-                ForEach (1...5, id: \.self) {_ in
-                    Text("Favorite")
-                }
+        if viewModel.favoriteMatches.isEmpty {
+            Text("You don't have any favorite matches yet.")
+        } else {
+            List(viewModel.favoriteMatches) { match in
+                MatchCell(viewModel: viewModel, match: match)
             }
         }
+        
+    }
 }
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritesView()
+       FavoritesView()
     }
 }

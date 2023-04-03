@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MatchCell: View {
+    @ObservedObject var viewModel: MatchesViewModel
     var match: Match
     
     var body: some View {
@@ -15,11 +16,10 @@ struct MatchCell: View {
             HStack{
                 Text(match.utcDate)
                 Spacer()
-                Button {
-                    print("Fav")
-                } label: {
-                    Image(systemName: "heart")
-                }
+                
+                Button(action: { viewModel.toggleFavorite(match: match) }) {
+                    Image(systemName: viewModel.favoriteMatches.contains(match) ? "heart.fill" : "heart")
+                               }
             }
             .padding(10.0)
             HStack {
@@ -56,6 +56,6 @@ struct MatchCell: View {
 
 struct MatchCell_Previews: PreviewProvider {
     static var previews: some View {
-        MatchCell(match: Match(id: 1, utcDate: "2023-04-01", homeTeam: Team(name: "LiverPool", clubIcon: "https://crests.football-data.org/PL.png"), awayTeam: Team(name: "Man City", clubIcon: "https://crests.football-data.org/PL.png"), score: Score(winner: "", fullTime: Time(home: 1, away: 1))))
+        MatchCell(viewModel: MatchesViewModel(networkManager: NetworkManager()), match: Match(id: 1, utcDate: "2023-04-01", homeTeam: Team(name: "LiverPool", clubIcon: "https://crests.football-data.org/PL.png"), awayTeam: Team(name: "Man City", clubIcon: "https://crests.football-data.org/PL.png"), score: Score(fullTime: Time(home: 1, away: 1))))
     }
 }

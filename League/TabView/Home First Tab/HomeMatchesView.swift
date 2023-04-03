@@ -14,9 +14,8 @@ struct HomeMatchesView: View {
     var body: some View {
         NavigationView {
             List(viewModel.matches) { match in
-                MatchCell(match: match)
+                MatchCell(viewModel: viewModel, match: match)
             }
-            .listStyle(.plain)
             .listRowSeparator(.hidden)
             .navigationTitle("League")
         }

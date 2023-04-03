@@ -12,12 +12,15 @@ struct MatchesDataModel: Codable {
 }
 
 // MARK: - Match
-struct Match: Codable, Identifiable {
+struct Match: Codable, Identifiable, Equatable {
     let id: Int
     let utcDate: String
     let homeTeam, awayTeam: Team
     let score: Score
 
+    static func == (lhs: Match, rhs: Match) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
 
 // MARK: - Team
@@ -33,7 +36,7 @@ struct Team: Codable {
 
 // MARK: - Score
 struct Score: Codable {
-    let winner: String?
+//    let winner: String?
     let fullTime: Time
     
 }
