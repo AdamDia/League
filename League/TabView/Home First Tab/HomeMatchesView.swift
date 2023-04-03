@@ -9,26 +9,43 @@ import SwiftUI
 
 struct HomeMatchesView: View {
     
-    @StateObject private var viewModel =  MatchesViewModel(networkManager: NetworkManager())
+    @EnvironmentObject var viewModel: MatchesViewModel
     
     var body: some View {
-        NavigationView {
-            List(viewModel.matches) { match in
-                MatchCell(viewModel: viewModel, match: match)
+        ZStack {
+            NavigationView {
+                        ScrollView {
+                            LazyVStack(alignment: .leading) {
+                                ForEach(viewModel.sortedDates, id: \.self) { date in
+                                    Group {
+                                        Section(header: Text(date, style: .date)) {
+                                            ForEach(viewModel.matchesByDate[date] ?? []) { match in
+                                                MatchCell(viewModel: viewModel, match: match)
+                                                    .background(Color(hex: "D3D3D3"))
+                                                    .cornerRadius(10.0)
+                                                    .padding(.bottom)
+                                                    
+                                            }
+                                        }
+                                        .font(.headline)
+                                    }
+                                    .padding(.bottom, -5.0)
+                                }
+                            }
+                            
+                        }
+                        .onAppear {
+                            viewModel.getPLMatches()
+                        }
+                    .navigationTitle("League")
             }
-            .listRowSeparator(.hidden)
-            .navigationTitle("League")
+            if viewModel.isLoading {LoadingView()}
         }
-        
-        .onAppear {
-            viewModel.getPLMatches()
+    }
+    
+    struct HomeMatchesView_Previews: PreviewProvider {
+        static var previews: some View {
+            HomeMatchesView()
         }
     }
 }
-
-struct HomeMatchesView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeMatchesView()
-    }
-}
-

@@ -12,7 +12,7 @@ struct MatchesDataModel: Codable {
 }
 
 // MARK: - Match
-struct Match: Codable, Identifiable, Equatable {
+struct Match: Codable, Identifiable, Equatable, Hashable {
     let id: Int
     let utcDate: String
     let homeTeam, awayTeam: Team
@@ -21,6 +21,10 @@ struct Match: Codable, Identifiable, Equatable {
     static func == (lhs: Match, rhs: Match) -> Bool {
         return lhs.id == rhs.id
     }
+    
+    func hash(into hasher: inout Hasher) {
+           hasher.combine(id)
+       }
 }
 
 // MARK: - Team

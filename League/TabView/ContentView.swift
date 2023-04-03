@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = MatchesViewModel(networkManager: NetworkManager())
     var body: some View {
         TabView {
             HomeMatchesView()
                 .tabItem {
                     Label("Matches", systemImage: "soccerball")
                 }
+                .tag(0)
+                .environmentObject(viewModel)
             
             FavoritesView()
                 .tabItem {
                     Label("Favorites", systemImage: "heart")
                 }
+                .tag(1)
+                .environmentObject(viewModel)
           }
     }
 }

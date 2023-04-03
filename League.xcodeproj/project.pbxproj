@@ -26,8 +26,9 @@
 		8AA3698E29DA45F000B7A7B7 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3698D29DA45F000B7A7B7 /* JSONLoader.swift */; };
 		8AA3699029DA463C00B7A7B7 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3698F29DA463C00B7A7B7 /* MockNetworkManager.swift */; };
 		8AA3699229DA46E500B7A7B7 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3699129DA46E500B7A7B7 /* NetworkManagerTests.swift */; };
-		8AA3699529DA752900B7A7B7 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA3699429DA752900B7A7B7 /* SVGKit */; };
-		8AA3699729DA752900B7A7B7 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA3699629DA752900B7A7B7 /* SVGKitSwift */; };
+		8AA369A929DB31DA00B7A7B7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA369A829DB31DA00B7A7B7 /* LoadingView.swift */; };
+		8AA369AB29DB56AC00B7A7B7 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA369AA29DB56AC00B7A7B7 /* DateFormatter.swift */; };
+		8AA369AD29DB88CC00B7A7B7 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA369AC29DB88CC00B7A7B7 /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,9 @@
 		8AA3698D29DA45F000B7A7B7 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		8AA3698F29DA463C00B7A7B7 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		8AA3699129DA46E500B7A7B7 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		8AA369A829DB31DA00B7A7B7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		8AA369AA29DB56AC00B7A7B7 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		8AA369AC29DB88CC00B7A7B7 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA3699729DA752900B7A7B7 /* SVGKitSwift in Frameworks */,
-				8AA3699529DA752900B7A7B7 /* SVGKit in Frameworks */,
 				8AA3697429D924CD00B7A7B7 /* Kingfisher in Frameworks */,
 				8AA3696429D8CC2600B7A7B7 /* Moya in Frameworks */,
 			);
@@ -109,6 +111,7 @@
 				8AA3692529D5E2C600B7A7B7 /* Info.plist */,
 				8AA3691729D54A9C00B7A7B7 /* LeagueApp.swift */,
 				8AA3696E29D8E52700B7A7B7 /* TabView */,
+				8AA369A729DABC6400B7A7B7 /* Helpers + Extensions */,
 				8AA3696529D8CD7000B7A7B7 /* Network */,
 				8AA3691B29D54A9D00B7A7B7 /* Assets.xcassets */,
 				8AA3691D29D54A9D00B7A7B7 /* Preview Content */,
@@ -141,7 +144,6 @@
 				8AA3691929D54A9C00B7A7B7 /* ContentView.swift */,
 				8AA3696F29D8E53A00B7A7B7 /* Home First Tab */,
 				8AA3697029D8E55100B7A7B7 /* Favorites Second Tab */,
-				8AA3697529D9266700B7A7B7 /* KingFisherImageView.swift */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
@@ -175,6 +177,17 @@
 			path = LeagueTests;
 			sourceTree = "<group>";
 		};
+		8AA369A729DABC6400B7A7B7 /* Helpers + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3697529D9266700B7A7B7 /* KingFisherImageView.swift */,
+				8AA369A829DB31DA00B7A7B7 /* LoadingView.swift */,
+				8AA369AA29DB56AC00B7A7B7 /* DateFormatter.swift */,
+				8AA369AC29DB88CC00B7A7B7 /* Color+Ext.swift */,
+			);
+			path = "Helpers + Extensions";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,8 +207,6 @@
 			packageProductDependencies = (
 				8AA3696329D8CC2600B7A7B7 /* Moya */,
 				8AA3697329D924CD00B7A7B7 /* Kingfisher */,
-				8AA3699429DA752900B7A7B7 /* SVGKit */,
-				8AA3699629DA752900B7A7B7 /* SVGKitSwift */,
 			);
 			productName = League;
 			productReference = 8AA3691429D54A9C00B7A7B7 /* League.app */;
@@ -250,7 +261,6 @@
 			packageReferences = (
 				8AA3696229D8CC2600B7A7B7 /* XCRemoteSwiftPackageReference "Moya" */,
 				8AA3697229D924CD00B7A7B7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				8AA3699329DA752900B7A7B7 /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			productRefGroup = 8AA3691529D54A9C00B7A7B7 /* Products */;
 			projectDirPath = "";
@@ -288,10 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA3697129D8E57A00B7A7B7 /* FavoritesView.swift in Sources */,
+				8AA369AD29DB88CC00B7A7B7 /* Color+Ext.swift in Sources */,
 				8AA3698E29DA45F000B7A7B7 /* JSONLoader.swift in Sources */,
 				8AA3695A29D8833D00B7A7B7 /* MatchCell.swift in Sources */,
 				8AA3696129D88C4800B7A7B7 /* MatchesDataModel.swift in Sources */,
+				8AA369AB29DB56AC00B7A7B7 /* DateFormatter.swift in Sources */,
 				8AA3696929D8E45300B7A7B7 /* HomeMatchesView.swift in Sources */,
+				8AA369A929DB31DA00B7A7B7 /* LoadingView.swift in Sources */,
 				8AA3696729D8CFF200B7A7B7 /* MatchesViewModel.swift in Sources */,
 				8AA3691A29D54A9C00B7A7B7 /* ContentView.swift in Sources */,
 				8AA3695D29D8894A00B7A7B7 /* NetworkManager.swift in Sources */,
@@ -579,14 +592,6 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		8AA3699329DA752900B7A7B7 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -599,16 +604,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8AA3697229D924CD00B7A7B7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		8AA3699429DA752900B7A7B7 /* SVGKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AA3699329DA752900B7A7B7 /* XCRemoteSwiftPackageReference "SVGKit" */;
-			productName = SVGKit;
-		};
-		8AA3699629DA752900B7A7B7 /* SVGKitSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AA3699329DA752900B7A7B7 /* XCRemoteSwiftPackageReference "SVGKit" */;
-			productName = SVGKitSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

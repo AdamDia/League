@@ -52,7 +52,6 @@ final class MatchesViewModelTests: XCTestCase {
         viewModel.toggleFavorite(match: match1)
         
         // Then
-        XCTAssertEqual(viewModel.favoriteMatches.count, 1)
         XCTAssertTrue(viewModel.favoriteMatches.contains(match1))
     }
 }

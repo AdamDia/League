@@ -14,6 +14,9 @@ struct KingFisherImageView: View {
     var body: some View {
         KFImage(URL(string: imageStrURL))
             .resizable()
+            .placeholder{
+                Image(systemName: "soccerball")
+            }
             .aspectRatio(contentMode: .fit)
             .frame(width: 30, height: 30)
     }
@@ -21,7 +24,7 @@ struct KingFisherImageView: View {
 
 struct KingFisherImageView_Previews: PreviewProvider {
     static var previews: some View {
-//        KingFisherImageView(imageStrURL: "https://crests.football-data.org/PL.png")
-        KingFisherImageView(imageStrURL: "https://crests.football-data.org/63.svg")
+        KingFisherImageView(imageStrURL: "https://crests.football-data.org/PL.png")
+//        KingFisherImageView(imageStrURL: "https://crests.football-data.org/63.svg")
     }
 }
