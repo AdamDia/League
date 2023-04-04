@@ -10,7 +10,7 @@ import Foundation
 extension DateFormatter {
     static let hourMinuteFormatter: DateFormatter = {
             let formatter = DateFormatter()
-            formatter.dateFormat = "HH:mm a"
+            formatter.dateFormat = "hh:mm"
             return formatter
         }()
     

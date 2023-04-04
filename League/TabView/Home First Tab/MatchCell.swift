@@ -12,49 +12,6 @@ struct MatchCell: View {
     var match: Match
     
     var body: some View {
-        //        VStack{
-        //            HStack{
-        //                Spacer()
-        //                Button(action: { viewModel.toggleFavorite(match: match) }) {
-        //                    withAnimation {
-        //                        Image(systemName: viewModel.favoriteMatches.contains(match) ? "heart.fill" : "heart")
-        //                            .frame(width: 30)
-        //                    }
-        //                }
-        //            }
-        //            .padding(5.0)
-        //            HStack(spacing: 8.0) {
-        //                Spacer()
-        //                Text(match.homeTeam.name)
-        //                    .font(.system(size: 10.0))
-        //                    .fontWeight(.bold)
-        //                    .lineLimit(2)
-        //
-        //                KingFisherImageView(imageStrURL: match.homeTeam.clubIcon)
-        //
-        //                if let homeScore = match.score.fullTime.home {
-        //                    Text("\(homeScore) - \(match.score.fullTime.away!)")
-        //                        .frame(maxWidth: .infinity, alignment: .center)
-        //
-        //                } else {
-        //                    Text(DateFormatter.hourMinuteFormatter.convertDateString(match.utcDate) ?? "Postponded")
-        //                    .font(.system(size: 10.0))
-        //                        .fontWeight(.bold)
-        //
-        //                }
-        //
-        //
-        //                KingFisherImageView(imageStrURL: match.awayTeam.clubIcon)
-        //                Text(match.awayTeam.name)
-        //                    .font(.system(size: 10.0))
-        //                    .fontWeight(.bold)
-        //                    .lineLimit(2)
-        //                Spacer()
-        //            }
-        //            .padding(.bottom, 5.0)
-        //
-        //        }
-        //
         VStack(alignment: .center){
             HStack{
                 Spacer()
