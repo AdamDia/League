@@ -26,9 +26,7 @@ struct LoadingView: View {
         ZStack {
             Color(.systemBackground)
                 .ignoresSafeArea()
-            
-            //ActivityIndicator() //uikit way
-            ProgressView() //swiftUI way
+            ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: .primary))
                 .scaleEffect(2)
         }
